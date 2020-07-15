@@ -1,7 +1,7 @@
 # appodeal_py
 
 AppoDeal API Client library for Python.
-```
+
 By default data is extracted for all possible detalisation levels:
 
 * date - splits the statistics by date.
@@ -11,7 +11,7 @@ By default data is extracted for all possible detalisation levels:
 * banner_type - splits the statistics by ad type (e.g. interstitial, video, baner, native, mrec, rewarded video).
 * segment - splits the statistics by segment.
 * placement - splits the statistics by placement.
-```
+
 
 ## Installation
 
