@@ -8,7 +8,7 @@ setup(
     author_email='korshunatk@gmail.com',
     url='https://github.com/PoradaKev/appodeal_py',
     packages=[
-        'appsflyer',
+        'appodeal',
     ],
     license='MIT',
     install_requires=[
