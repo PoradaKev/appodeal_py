@@ -24,8 +24,8 @@ $ pip install git+https://github.com/PoradaKev/appodeal_py
 ```python
 from appodeal import Appodeal
 
-api_token = "b51dd49e89bae7e3fa646ec5e1c7082d"
-user_id = 102910
+api_token = "YOUR_TOKEN"
+user_id = YOUR_ID
 
 ap = Appodeal(api_token, user_id)
 
