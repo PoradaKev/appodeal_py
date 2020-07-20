@@ -43,4 +43,4 @@ MIT
 
 ## Author
 
-[Oleksandr Korshun](https://github.com/PoradaKev)
+[Oleksandr Korshun](https://www.linkedin.com/in/oleksandr-korhun/)
