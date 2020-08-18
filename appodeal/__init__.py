@@ -6,9 +6,8 @@ from io import StringIO
 from furl import furl
 from tqdm import tqdm
 from time import sleep
-
-
 class Appodeal:
+    
     DEFAULT_ENDPOINT = "https://api-services.appodeal.com/api/v2/stats_api?/"
     TASK_ENDPOINT = "https://api-services.appodeal.com/api/v2/check_status?/"
     OUTPUT_ENDPOINT = "https://api-services.appodeal.com/api/v2/output_result?/"
@@ -106,7 +105,6 @@ class Appodeal:
         starttime = datetime.now()
         diff = []
         diff = diff + [int((datetime.now() - starttime).seconds)] 
-        #pbar = tqdm(total=report_waiting_time) 
         
         with tqdm(total=report_waiting_time) as pbar:
             while diff[-1] < report_waiting_time:
@@ -139,7 +137,12 @@ class Appodeal:
         
         print('ReportData collected!')
 
+        if 'data' not in report_data:
+            report_data = requests.get(report_data['url']).json()
+        else:
+            report_data = report_data["data"]
+        
         if as_df:
-            return pd.json_normalize(report_data["data"])
-
-        return report_data
+            return pd.json_normalize(report_data)
+        else:
+            return report_data
